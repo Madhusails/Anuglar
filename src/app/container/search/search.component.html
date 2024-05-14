@@ -1,12 +1,14 @@
 <div class="ekart--search--product">
     <form>
-        <input class="ekart-search-product-input" [(ngModel)]="searchText" name="searchInput">
-        <button
+        <!-- <input class="ekart-search-product-input" [(ngModel)]="searchText" (input)="onSearchTextChanged()" name="searchInput"> -->
+        <input class="ekart-search-product-input" #searchInput>
+        <!-- <button
   [ngClass]="{'btn':true, 'btn-search': searchText, 'btn-search-disabled': !searchText}" 
   [disabled]="!searchText" 
 >
   Search
-</button>
+</button> -->
+<button class="btn btn-search" (click)="updateSearchText()">Search</button>
 
     </form>
 </div>
